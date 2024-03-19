@@ -15,7 +15,11 @@
 <body>
     
 <?php
-$conn = mysqli_connect('localhost', 'username', 'password', 'todolist');
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'todolist';
+$conn = mysqli_connect($host, $username, $password, $database);
 
 if(!$conn){
     die("Connection Failed: " . mysqli_connect_error());
